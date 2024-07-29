@@ -51,4 +51,3 @@ exit_button.pack(pady=10)
 
 # 运行主循环
 root.mainloop()
-print
