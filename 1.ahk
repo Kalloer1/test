@@ -36,7 +36,7 @@ file_name_ex_set[i] := RegExReplace(file_path_set[i], "m)^.+\\", "")
 file_name_set[i]  := RegExReplace(file_name_ex_set[i], "mU)\.[0-9a-z]+$")
 file_path := file_path_set[i]
 file_name := file_name_set[i]
-FileCreateShortcut, %file_path%, %A_Desktop%\ %file_name%-快捷方式.lnk
+FileCreateShortcut, %file_path%, %A_Desktop%\ %file_name%.lnk
 i++
 }
 else if InStr(Attributes, "D")
@@ -45,7 +45,7 @@ folder_path_set.Insert(j, A_LoopField)
 folder_name_set[j] := RegExReplace(folder_path_set[j], "m)^.+\\", "")
 folder_path := folder_path_set[j]
 folder_name := folder_name_set[j]
-FileCreateShortcut, %folder_path%, %A_Desktop%\ %folder_name%-.lnk
+FileCreateShortcut, %folder_path%, %A_Desktop%\ %folder_name%.lnk
 j++
 }
 }
